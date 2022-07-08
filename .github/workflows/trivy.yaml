@@ -2,7 +2,7 @@ name: build
 on:
   push:
     branches:
-      - master
+      - master, main
   pull_request:
 jobs:
   build:
@@ -17,7 +17,8 @@ jobs:
         with:
           scan-type: 'config'
           hide-progress: false
-          format: 'table'
+          format: 'json'
           exit-code: '1'
           ignore-unfixed: true
-          severity: 'CRITICAL,HIGH'
+          severity: 'CRITICAL,HIGH,MEDIUM'
+          output: 'results.txt'
