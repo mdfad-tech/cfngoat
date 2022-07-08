@@ -17,8 +17,7 @@ jobs:
         with:
           scan-type: 'config'
           hide-progress: false
-          format: 'json'
+          format: 'table'
           exit-code: '0'
           ignore-unfixed: true
-          severity: 'CITICAL,HIGH,MEDIUM'
-          output: 'results.txt'
+          severity: 'CRITICAL,HIGH,MEDIUM'
